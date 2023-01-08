@@ -12,6 +12,10 @@ class Comments extends Component
 
     public function addComment()
     {
+        if ($this->newComment == '') {
+            return;
+        }
+        
         array_unshift($this->comments, [
             'creator' => 'Bitfumes',
             'body' => $this->newComment,
